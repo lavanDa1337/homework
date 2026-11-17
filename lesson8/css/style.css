@@ -79,7 +79,7 @@ h1 {
   bottom: 136px;
 }
 
-.button-play-1::before {
+.button-play-1 {
   position: absolute;
   content: "";
   background: url(../images/play-icon.png);
