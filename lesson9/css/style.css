@@ -117,6 +117,7 @@ button {
   cursor: pointer;
   outline: none;
   width: auto;
+  border: none;
 }
 
 .checkbox-input::after {
@@ -124,6 +125,7 @@ button {
   position: absolute;
   width: 16px;
   height: 16px;
+  margin-top: 1px;
   margin-left: -22px;
   border: 1px solid #333;
   border-radius: 4px;
