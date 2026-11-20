@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заполнение формы</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <form class="form">
+      <fieldset>
+        <h2>Ваши личные данные</h2>
+        <label>
+          Ваше имя
+          <input
+            class="mb"
+            type="text"
+            placeholder="Имя"
+            name="first-name"
+            required
+          />
+          <input
+            class="mb"
+            type="text"
+            placeholder="Фамилия"
+            name="last-name"
+            required
+          />
+        </label>
+        <label>
+          Ваш возраст
+          <input
+            class="mb"
+            type="number"
+            placeholder="Возраст"
+            inputmode="numeric"
+            name="age"
+          />
+        </label>
+        <label>
+          Дата рождения
+          <input class="mb" type="date" name="date" />
+        </label>
+        <label>
+          Ваш номер телефона
+          <input
+            class="mb"
+            type="tel"
+            placeholder="Номер телефона"
+            inputmode="tel"
+            name="phone"
+          />
+        </label>
+        <label>
+          Ваша почта
+          <input
+            class="mb"
+            type="email"
+            placeholder="Ваша почта"
+            inputmode="email"
+            name="email"
+            required
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Доп. информация</legend>
+        <label>
+          <textarea class="info" name="message"></textarea>
+        </label>
+        <label class="checkbox-label">
+          <input class="checkbox-input" type="checkbox" name="pd" required />
+          <span>Я принимаю правила</span>
+        </label>
+      </fieldset>
+      <button class="mb" type="submit">Отправить форму</button>
+      <button class="mb" type="reset">Очистить</button>
+    </form>
+  </body>
+</html>

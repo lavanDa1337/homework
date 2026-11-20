@@ -1,0 +1,177 @@
+@font-face {
+  font-family: GTA-Russian;
+  src: local("GTA-Russian"), url("../fonts/GTA-Russian.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: #f39bea;
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #38103f 35%,
+    #d83f87 68%,
+    #ff8e6e 88%,
+    #ffc77865 100%
+  );
+}
+
+.form {
+  background: linear-gradient(
+    180deg,
+    #1b1448 0%,
+    #6c2279 35%,
+    #d83f87 68%,
+    #ff8e6e 88%,
+    #ffc778 100%
+  );
+  font-family: GTA-Russian, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  max-width: 400px;
+  min-height: 800px;
+  width: 100%;
+  padding: 32px 32px;
+  border: 4px solid #ff2a85;
+  border-radius: 8px;
+  box-shadow:
+    0 0 15px rgba(255, 42, 133, 0.6),
+    0 0 35px rgba(139, 47, 201, 0.45),
+    0 10px 25px rgba(27, 20, 72, 0.5);
+  animation: neon-border-pulse 5s ease-in-out infinite alternate;
+}
+
+h2 {
+  font-family: GTA-Russian, sans-serif;
+  color: #c9cfdd;
+  letter-spacing: 5px;
+  font-size: 26px;
+}
+
+fieldset {
+  border: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.mb {
+  margin: 4px 0;
+}
+
+label {
+  color: #f39bea;
+}
+
+input::placeholder {
+  color: #ee85e35a;
+}
+
+input,
+textarea,
+.checkbox {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  background-color: #062c8578;
+  color: #f39bea;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  background-color: #062c8578;
+  color: #f39bea;
+}
+
+.info {
+  max-width: 300px;
+  min-width: 300px;
+  max-height: 200px;
+  min-height: 80px;
+  color: #f39bea;
+}
+
+.checkbox-label {
+  padding-left: 22px;
+}
+
+.checkbox-input {
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  width: auto;
+}
+
+.checkbox-input::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -22px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.checkbox-input:checked::after {
+  background:
+    url("../images/check-icon.svg") no-repeat center,
+    #7d0771;
+}
+
+button {
+  border: 0;
+  background-color: #7d0771;
+  color: #f39bea;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.form:has(:user-invalid) input:required {
+  animation: shadow 1s ease 1;
+}
+
+@keyframes neon-border-pulse {
+  0% {
+    border-color: #ff2a85;
+    box-shadow:
+      0 0 20px rgba(255, 42, 133, 0.7),
+      0 0 40px rgba(255, 42, 133, 0.3);
+  }
+  50% {
+    border-color: #8b2fc9;
+    box-shadow:
+      0 0 25px rgba(139, 47, 201, 0.8),
+      0 0 50px rgba(139, 47, 201, 0.4);
+  }
+  100% {
+    border-color: #00e5ff;
+    box-shadow:
+      0 0 20px rgba(0, 229, 255, 0.7),
+      0 0 40px rgba(0, 229, 255, 0.3);
+  }
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+.checkbox-input:focus-visible::after {
+  outline: 2px solid #00ff48;
+  outline-offset: 1px;
+}
